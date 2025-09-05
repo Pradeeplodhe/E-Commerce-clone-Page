@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Men's Collection</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <header class="bg-blue-900 text-white py-4 text-center text-2xl font-bold">
+    Men's E-Commerce Store
+  </header>
+ <!-- <img src="./pic/OIP.jpg" alt=""> -->
+  <div class="max-w-7xl mx-auto px-4 py-6">
+    <div class="mb-4 flex flex-col md:flex-row items-center justify-between gap-2">
+      <input id="searchInput" type="text" placeholder="Search products..." class="w-full md:w-1/2 px-4 py-2 border rounded shadow">
+      <select id="sortSelect" class="px-4 py-2 border rounded shadow">
+        <option value="default">Sort by</option>
+        <option value="asc">Price: Low to High</option>
+        <option value="desc">Price: High to Low</option>
+      </select>
+    </div>
+    <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Products will be injected here -->
+    </div>
+  </div>
+
+  <script>
+    const productGrid = document.getElementById("productGrid");
+    const searchInput = document.getElementById("searchInput");
+    const sortSelect = document.getElementById("sortSelect");
+
+    let products = [];
+
+    async function fetchProducts() {
+      const res = await fetch("https://fakestoreapi.com/products/category/men's clothing");
+      const menProducts = await res.json();
+      const accessories = [
+        {
+          id: 21,
+          title: "Men's Watch",
+          price: 1999,
+         image:"./pic/OIP.jpg"
+         // image: "https://m.media-amazon.com/images/I/81esnD+8TPL._AC_UL480_FMwebp_QL65_.jpg"
+        },
+        {
+          id: 22,
+          title: "Men's Belt",
+          price: 499,
+          image: "https://m.media-amazon.com/images/I/81QwQKJrREL._AC_UL480_FMwebp_QL65_.jpg"
+        },
+        {
+          id: 23,
+          title: "Men's Shoes",
+          price: 2599,
+          image: "https://m.media-amazon.com/images/I/71XP7ZUZJXL._AC_UL480_FMwebp_QL65_.jpg"
+        },
+        {
+          id: 24,
+          title: "Men's Wallet",
+          price: 899,
+          image: "https://m.media-amazon.com/images/I/71fIJ-dKyhL._AC_UL480_FMwebp_QL65_.jpg"
+        },
+        {
+          id: 25,
+          title: "Men's Cap",
+          price: 299,
+          image: "https://m.media-amazon.com/images/I/81tLSqOj4aL._AC_UL480_FMwebp_QL65_.jpg"
+        },
+        {
+          id: 22,
+          title: "Men's Belt",
+          price: 499,
+           image:"./pic/OIP.jpg"
+     
+          // image: "https://m.media-amazon.com/images/I/81QwQKJrREL._AC_UL480_FMwebp_QL65_.jpg"
+        }
+      ];
+      products = [...menProducts, ...accessories];
+      displayProducts(products);
+    }
+
+    function displayProducts(productList) {
+      productGrid.innerHTML = "";
+      productList.forEach(product => {
+        const box = document.createElement("div");
+        box.className = "bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center p-4 text-center hover:scale-105 transition-transform";
+        box.innerHTML = `
+          <img src="${product.image}" alt="${product.title}" class="h-48 w-full object-contain mb-4">
+          <h2 class="text-lg font-semibold">${product.title}</h2>
+          <p class="text-blue-600 font-bold">₹${product.price}</p>
+        `;
+        productGrid.appendChild(box);
+      });
+    }
+
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.toLowerCase();
+      const filtered = products.filter(p => p.title.toLowerCase().includes(query));
+      displayProducts(filtered);
+    });
+
+    sortSelect.addEventListener("change", () => {
+      let sorted = [...products];
+      if (sortSelect.value === "asc") {
+        sorted.sort((a, b) => a.price - b.price);
+      } else if (sortSelect.value === "desc") {
+        sorted.sort((a, b) => b.price - a.price);
+      }
+      displayProducts(sorted);
+    });
+
+    fetchProducts();
+  </script>
+</body>
+</html>
+

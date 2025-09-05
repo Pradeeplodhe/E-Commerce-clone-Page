@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1
+    hello, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <h1 style="  background: linear-gradient(135deg, #e37bc9, #7b074d);
+ ; margin-bottom: 200px; text-align: center; height: 80px; color: black; font-size: 70px;">  Womens </h1>
+ 
+ <button id="more">More ------</button>
+    <button id="back"  > <a href="../product.html" style="color: white;">Back to Home</a></button>
+    
+ 
+ 
+ <div class="cont">
+
+
+ </div>
+</body>
+</html>
+<style>
+
+
+#more,#back{
+  background: linear-gradient(135deg, hsl(287, 90%, 20%), #191d24);
+  /* color: black; */position: relative;
+   top: -270px;
+ 
+   margin: 0px;
+
+}
+#back{
+    left: 1800px;
+}
+
+  img{
+        height: 500px;width: 500px;
+    }
+    .cont{
+          /* height: 300px;
+          width: 400px; */
+          /* background-color: black; */
+          display: grid;
+          grid-template-columns: repeat(4,1fr);
+          /* grid-template-columns: 500px,1fr; */
+          margin: 0%;
+          gap: 10px;
+          padding: 10px;
+        /* background-color: blueviolet; */
+          margin: 10px;
+         row-gap: 40px;
+         column-gap: 40px;
+         /* box-shadow: rgba(255, 2, 2, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+        /* height: 2000px; */
+          position: relative;
+          top: -200px;
+    position: relative;
+          top: -250px;
+   
+        }
+    .cont #box {
+      /* width: 500px;
+    height: 900px; */ */
+      background-color: blueviolet;
+box-shadow:rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    text-align: center;
+    /* padding-top: 60px; */
+    padding-top: 20px;
+    background-color: aliceblue;
+   background: linear-gradient(135deg, #dfa9d3, #bf318b);
+ 
+   }
+   #smallbox{
+    display: grid;
+    /* justify-content: center; */
+      /* grid-template-row: (2,10px); */
+    /* background-color: aliceblue; */
+   grid-template-columns: repeat(2,1fr);
+         
+
+
+}
+
+
+button{
+    padding: 16px 36px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #1403ff, #7078cd);
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 114, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  /* top: 200px; */
+  overflow: hidden;
+
+  z-index: 1;
+  margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<script>
+    let api=fetch("data.json");
+     api.then((res)=> res.json()).then((data)=> {
+       console.log(data.womensProducts)
+       display(data.womensProducts)
+     })
+    
+ function display(data){
+    data.forEach(el => {
+        
+   
+  let box=document.createElement("div")
+  box.id="box"
+  
+  
+  let image=document.createElement("img")
+   image.setAttribute("src",el.image)
+
+
+   let  title =document.createElement("h2")
+      title.innerText=`titile :- ${el.title}`
+   
+       let smallbox=document.createElement("div")
+        smallbox.id="smallbox"
+      
+      
+        let id=document.createElement("h2")
+      id.innerText= `id:- ${el.id}`
+
+      let price=document.createElement("h1")
+    price.innerText=`Price:- $${el.price}`
+    
+
+    let hrr=document.createElement("hr")
+        
+    let button =document.createElement("button")
+    button.innerText="add To Cart"
+
+        button.addEventListener("click",function (){
+       console.log(el)
+       cart.push(el)
+         localStorage.setItem("cartarr",JSON.stringify(cart))
+           console.log(cart,typeof(cart))
+        
+        })
+
+     smallbox.append(id,price)
+    
+     box.append( image,title,smallbox,hrr,button)
+    console.log(box)
+
+    let cont =document.querySelector(".cont")
+   cont.append(box)
+  });}
+</script>

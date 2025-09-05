@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f0f2f5;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .profile-sidebar {
+      flex: 1 1 250px;
+      background: #2d2f36;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .profile-sidebar img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin-bottom: 15px;
+    }
+
+    .profile-sidebar h2 {
+      margin-bottom: 10px;
+      font-size: 34px;
+    }
+
+    .profile-sidebar p {
+      font-size: 24px;
+      font-weight: bold;
+      color: #bbb;
+    }
+
+    .profile-main {
+      flex: 2 1 650px;
+      padding: 30px;
+    }
+
+    .profile-main h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .info-group {
+      margin-bottom: 15px;
+    }
+
+    .info-group label {
+      display: block;
+      font-size: 24px;
+      color: #000000;
+      font-weight: bolder;
+    }
+
+    .info-group span {
+      display: block;
+      font-size: 20px;
+      font-weight: 600;
+      color: #111;
+      /* background-color: brown; */
+    }
+
+    .nav-links {
+      margin-top: 30px;
+      /* background-color: aquamarine; */
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+     /* background: linear-gradient(135deg, #00c6ff, #05356e); */
+ 
+    
+    }
+
+    .nav-links a {
+      background: #efefef;
+    background-color: cadetblue;
+      color: #f8f8f8;
+      padding:  10px;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      /* transition: background 0.3s; */
+       background: linear-gradient(135deg, #00c6ff, #05356e);
+         font-size: 20px;
+http://127.0.0.1:5500/Ecom/profile.html#         font-weight: 700;
+    }
+
+    .nav-links a:hover {
+         background: linear-gradient(135deg, #e08adc, #5f065d);
+   /* transition: (1.2);
+    */ transform: rotate(45,x);
+      /* background: #d0d0d0; */
+    }
+
+    /* @media (max-width: 768px) { */
+      .container {
+        flex-direction: column;
+      }
+
+      .profile-sidebar {
+        border-radius: 15px 15px 0 0;
+      }
+
+      .profile-main {
+        border-radihttp://127.0.0.1:5500/Ecom/profile.html#us: 0 0 15px 15px;
+      }
+    button{
+        background-color: #444;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="profile-sidebar">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.PZsMLTIgXaEsdCA0VjTo7gHaLH?pid=Api&P=0&h=180" alt="User Photo">
+      <h2 id="ProfileName">Pradeep Lodhi</h2>
+      <p id="profileMail">pradeep@example.com</p>
+    </div>
+
+    <div class="profile-main">
+      <h3>Profile Details</h3>
+      <div class="info-group">
+        <label>Full Name</label>
+        <spanid id="ProfileName2">Pradeep Lodhi</span>
+      </div>
+      <div class="info-group">
+        <label>Email</label>
+        <span id="profileMail2"   >pradeep@example.com</span>
+      </div>
+      <div class="info-group">
+        <label>Phone</label>
+        <span id="Mobile">+91 98765 43210</span>
+      </div>
+      <div class="info-group">
+        <label>Address</label>
+        <span>Bhopal, Madhya Pradesh</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#">🛒 My Orders</a>
+        <a href="helper.html">❤ Wishlist</a>
+        <a href="#">📦 Track Order</a>
+        <a href="product.html">🏠Back To Home</a>
+        <a href="1.html">🔒 Logout</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+<script>
+  let data= JSON.parse(localStorage.getItem("logininfo"))
+   console.log(data);
+
+
+     
+   let name=document.querySelector("#ProfileName")
+   name.innerText=data.name;
+   document.querySelector("#ProfileName2").innerText=data.name;
+   
+
+document.querySelector("#profileMail").innerText=data.m
+document.querySelector("#profileMail2").innerText=data.m
+
+
+document.querySelector("#Mobile").innerText=data.Mobile
+
+//    name.innerText=data.name
+   
+   
+//    console.log(data.name);
+//    console.log(data.Mobile);
+   
+</script>

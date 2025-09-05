@@ -1,0 +1,229 @@
+{
+  "mensProducts": [
+    {
+      "id": 1,
+      "title": "Men's Leather Watch",
+      "price": 2499,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/91EdM-AH9EL._SL1500_.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Classic White Shirt",
+      "price": 799,
+      "image": "https://www.simonjersey.com/images/mens-long-sleeve-oxford-shirt-white-p829-65044_zoom.jpg"
+   
+      }, {
+      "id": 3,
+      "title": "Men's Slim Fit Jeans",
+      "price": 1599,
+      "image": "https://i5.walmartimages.com/asr/eb9aaf39-7462-44c9-bd86-274cfb1d38fb_1.1440eb2973046b94785da8e1d9c4108f.jpeg"  },
+    {
+      "id": 4,
+      "title": "Black Sneakers",
+      "price": 2299,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81vvailKcNL._AC_UL1500_.jpg"
+    
+    },
+    {
+      "id": 5,
+      "title": "Formal Trousers",
+      "price": 1199,
+      "image": "https://i.etsystatic.com/23713226/r/il/fdf2a4/3061548039/il_1588xN.3061548039_o7as.jpg"  },
+    {
+      "id": 6,
+      "title": "Men's Sunglasses",
+      "price": 999,
+      "image": "https://tse2.mm.bing.net/th/id/OIP.Jc3VQQjR6tW9SY2G_REo0AHaHa?pid=Api&P=0&h=180"   },
+
+
+     {
+      "id": 7,
+      "title": "Casual T-Shirt",
+      "price": 599,
+      "image": "https://tse2.mm.bing.net/th/id/OIP.cWWYjwQn74DlKjHSaIJTbQHaJ4?pid=Api&P=0&h=180"  },
+    {
+      "id": 8,
+      "title": "Men's Sports Shoes",
+      "price": 2699,
+      "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/311108/02/sv01/fnd/IND/fmt/png/Questblitz-Men's-Running-Shoes" },
+    {
+      "id": 9,
+      "title": "Men's Hoodie",
+      "price": 1399,
+      "image": "https://tse1.mm.bing.net/th/id/OIP.jCTw5UssaP4yPs-2L5VLAQHaJ4?pid=Api&P=0&h=180"  },
+    {
+      "id": 10,
+      "title": "Leather Belt",
+      "price": 499,
+      "image": "https://tse2.mm.bing.net/th/id/OIP.JRQC2IYhGEGiRmmh1mrAyQHaJ1?pid=Api&P=0&h=180"  },
+    {
+      "id": 11,
+      "title": "Men's Kurta",
+      "price": 999,
+      "image": "https://tse3.mm.bing.net/th/id/OIP.TIs82mBSnDKT6RZXR0arHwHaLH?pid=Api&P=0&h=180" },
+    {
+      "id": 12,
+      "title": "Denim Jacket",
+      "price": 1899,
+      "image": "https://tse2.mm.bing.net/th/id/OIP._Xh9fDrrqW-_wHgGcLDRGwHaJ4?pid=Api&P=0&h=180"   },
+{
+      "id": 13,
+      "title": "Men's Wallet",
+      "price": 699,
+      "image": "https://tse4.mm.bing.net/th/id/OIP.uxKv_Na8yvS8NHMcXPjGQAAAAA?pid=Api&P=0&h=180"   },
+    {
+      "id": 14,
+      "title": "Fitness Track Watch",
+      "price": 2799,
+      "image": "https://tse3.mm.bing.net/th/id/OIP.YycwcFICw8uBsdyWDk5HHQHaKy?pid=Api&P=0&h=180"  },
+    {
+      "id": 15,
+      "title": "Cotton Vest",
+      "price": 399,
+      "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+    },
+    {
+      "id": 16,
+      "title": "Slim Fit Blazer",
+      "price": 3599,
+      "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+    },
+    {
+      "id": 17,
+      "title": "Chinos Pants",
+      "price": 1299,
+      "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg"
+    },
+    {
+      "id": 18,
+      "title": "Printed T-Shirt",
+      "price": 699,
+      "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UL640_QL65_ML3_.jpg"
+    }
+
+ ],
+
+   "womensProducts": [
+    { "id":10, "title": "Women Ethnic Kurti", "price": 699, "description": "", "image": "https://i.etsystatic.com/22489341/r/il/5202da/3203911478/il_fullxfull.3203911478_pkgx.jpg" },
+    { "id": 2, "title": "Women Floral Blouse Top", "price": 599, "description": "", "image": "https://handcmediastorage.blob.core.windows.net/productimages/LU/LUDZX036-J07-142821-1400px-1820px.jpg" },
+    { "id": 3, "title": "Ladies Skinny Jeans", "price": 1099, "description": "", "image": "https://cdn.fcglcdn.com/brainbees/images/products/583x720/19724789a.webp" },
+    { "id": 4, "title": "Women Running Sneakers", "price": 1399, "description": "", "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1545163738-1544814212-765dfd69-66c6-4362-b548-815b9bbfe43e-1545163708.jpg?crop=1xw:1xh;center,top" },
+    { "id": 5, "title": "Formal Pencil Skirt Women", "price": 799, "description": "", "image": "https://i.pinimg.com/236x/18/44/89/1844898abc226eaedba0c5936bf315ab.jpg" },
+    { "id": 6, "title": "Women Sunglasses Stylish", "price": 499, "description": "", "image": "https://www.brasslook.com/wp-content/uploads/2018/02/41.jpg" },
+    { "id": 7, "title": "Casual Printed T‑Shirt Women", "price": 399, "description": "", "image": "https://i5.walmartimages.com/seo/Directional-Vintage-Casual-Printed-T-Shirt-for-Women_e5320340-a7c4-4f03-b0fa-fb12640f9d84.0020bea888c998bd5e75b4a9c0e74bba.jpeg" },
+    { "id": 8, "title": "Women Sleeveless Dress", "price": 1499, "description": "", "image": "https://gloimg.drlcdn.com/L/pdm-product-pic/Clothing/2016/08/18/source-img/20160818101245_19065.jpg?a=6" },
+    { "id": 9, "title": "Handbag Women Tote", "price": 1899, "description": "", "image": "https://i.pinimg.com/originals/6b/aa/0e/6baa0ec58322ed8eadbf612c98ef45a7.jpg" },
+    
+      { "id":11, "title": "Women Party Heels", "price": 2599, "description": "", "image": "https://i.etsystatic.com/25355596/r/il/2b9ff8/3213238227/il_1588xN.3213238227_qt60.jpg" },
+    { "id":12, "title": "Women Denim Jacket", "price": 1599, "description": "", "image": "https://i.etsystatic.com/26083335/r/il/914d95/3104679691/il_1588xN.3104679691_ekor.jpg" },
+    { "id":13, "title": "Women Wallet Leather", "price": 499, "description": "", "image": "https://cdn.shopify.com/s/files/1/0597/5592/1540/products/2_2_669x892.jpg?v=1668842556" },
+    { "id":14, "title": "Women Saree Printed", "price": 1299, "description": "", "image": "https://5.imimg.com/data5/SELLER/Default/2022/12/LL/KP/TX/22817933/silver-print-ethnic-kurti-set-for-women-500x500.jpg" },
+    { "id":15, "title": "Women Lehenga Choli", "price": 3299, "description": "", "image": "https://i.pinimg.com/originals/6e/c1/c0/6ec1c027672348ae28f74ce150acbe89.jpg" },
+    { "id":16, "title": "Women Dupatta Stole", "price": 399, "description": "", "image": "https://sc01.alicdn.com/kf/Ae5da70138c41454ea021339f4da3ffe52.jpg" },
+    { "id":17, "title": "Women Night Suit Set", "price": 699, "description": "", "image": "https://i.pinimg.com/originals/54/51/29/545129919b9446713da24264db6d7210.png" },
+    { "id":18, "title": "Women Makeup Kit Set", "price": 1499, "description": "", "image": "https://i.pinimg.com/originals/c9/87/75/c987753ced495c12344e4c1a565a61b0.jpg" },
+    { "id":19, "title": "Women Sports Leggings", "price": 799, "description": "", "image": "https://i.pinimg.com/originals/c9/87/75/c987753ced495c12344e4c1a565a61b0.jpg" },
+    { "id":20, "title": "Women Quartz Analog Watch", "price": 1299, "description": "", "image": "https://i.pinimg.com/originals/c9/87/75/c987753ced495c12344e4c1a565a61b0.jpg" }
+  ],
+
+
+
+
+
+
+
+  "kidsProducts": [
+    { "id": 1, "title": "Titan Zoop Analog Watch (5–12 yrs)", "price": 639, "description": "Colourful easy‑read analog watch, water‑resistant, ideal for learning time.", "image": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw885cd9ce/images/Titan/Catalog/C3030PP05_2.jpg?sw=800&sh=800" },
+    { "id": 2, "title": "Aretto Slip‑On Sneakers (size 28–35)", "price": 2645, "description": "Lightweight breathable sneakers with grippy soles for active play.", "image": "https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/25243354/2024/6/22/97e8d335-21ee-428e-bf62-480242071bf21719037477736-Aretto-Kids-Classic-Black-Expanding-Breathable-Anti-Skid--En-1.jpg" },
+    { "id": 3, "title": "Noise Champ 2 Kids Smartwatch (5‑10 yrs)", "price": 2199, "description": "Digital watch with games, reminders, camera & IP68 water‑proofing.", "image": "https://tse3.mm.bing.net/th/id/OIP.rATkr4ZGT_Ux22rCqnhY-wAAAA?pid=Api&P=0&h=180" },
+    { "id": 4, "title": "Turet Taffy GPS Smartwatch (6–14 yrs)", "price": 6499, "description": "GPS + video calling + SOS button, geo‑fence and parental control", "image": "https://m.media-amazon.com/images/I/41lhzSjWCUL._SX300_SY300_QL70_ML2_.jpg" },
+    { "id": 5, "title": "Spiky Basilisk GPS Smartwatch (5‑12 yrs)", "price": 1974, "description": "Waterproof kids smartwatch with GPS tracking & SOS emergency alert.", "image": "http://rukmini1.flixcart.com/image/300/300/xif0q/screen-guard/impossible-screen-guard/r/d/f/noise-champ-2-smart-watch-for-kids-with-habit-reminders-mickey-original-imagsu5awnqrtpjm.jpeg" },
+    { "id": 6, "title": "VTech Kidizoom Smart Camera Watch", "price": 2499, "description": "Watch with camera, games and learning tools by VTech.", "image": "" },
+    { "id": 7, "title": "Cosjoype Dual‑Camera Touchscreen Smartwatch", "price": 1899, "description": "Includes touch display, games, MP3, pedometer & selfie camera.", "image": "PASTE_IMAGE_URL" },
+    { "id": 8, "title": "Smartivity Montessori Slide Puzzle (4‑8 yrs)", "price": 409, "description": "Educational puzzle set for pattern & colour matching skills.", "image": "PASTE_IMAGE_URL" },
+    { "id": 9, "title": "Einstein Box Science Kit (8‑14 yrs)", "price": 695, "description": "Hands‑on STEM science experiments for school holiday fun.", "image": "PASTE_IMAGE_URL" },
+    { "id":10, "title": "Goody King Magnetic Building Blocks (3‑6 yrs)", "price": 410, "description": "Magnetic blocks for safe creative play and motor skill development.", "image": "PASTE_IMAGE_URL" },
+    { "id":11, "title": "LuvLap Sunny Ride‑On Car (1‑3 yrs)", "price": 1199, "description": "Ride‑on car with music, horn, safety guard & storage tray.", "image": "PASTE_IMAGE_URL" },
+    { "id":12, "title": "Soft Plush Elephant Toy (Baby to 3 yrs)", "price": 585, "description": "Cuddly non‑toxic stuffed toy perfect for newborns & toddlers.", "image": "PASTE_IMAGE_URL" },
+    { "id":13, "title": "Nerf Alpha Strike Fang Toy Blaster (8+ yrs)", "price": 309, "description": "Foam dart blaster—fun outdoor toy for older kids.", "image": "PASTE_IMAGE_URL" },
+    { "id":14, "title": "Slide Projector Torch (Bedtime Fun)", "price": 189, "description": "Slide projector torch with interchangeable night‑time images.", "image": "PASTE_IMAGE_URL" },
+    { "id":15, "title": "LCD Writing Tablet (8.5″ Slate)", "price": 199, "description": "Reusable doodle pad for handwriting, drawing or traveling.", "image": "PASTE_IMAGE_URL" },
+    { "id":16, "title": "Uno Card Game (7+ yrs)", "price": 111, "description": "Classic family card game, fun & easy rules for group play.", "image": "PASTE_IMAGE_URL" },
+    { "id":17, "title": "Stacking Ring Toy (Toddler)", "price": 163, "description": "Colourful stacking rings for motor development, ages 1‑3.", "image": "PASTE_IMAGE_URL" },
+    { "id":18, "title": "Remote Control Monster Truck Car", "price": 849, "description": "Rechargeable RC off‑road truck with lights & pull‑back action.", "image": "PASTE_IMAGE_URL" },
+    { "id":19, "title": "Junior Speed Cube 3×3 Puzzle", "price": 189, "description": "Beginner speedcube to improve brain‑teasing puzzle skills.", "image": "PASTE_IMAGE_URL" },
+    { "id":20, "title": "Kids Karaoke Speaker with LEDs", "price": 449, "description": "Mini bluetooth karaoke mic with LED lights for fun singing sessions.", "image": "PASTE_IMAGE_URL" }
+  ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

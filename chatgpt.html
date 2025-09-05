@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopNow - Products</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fafb;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 30px;
+      font-weight: bold;
+      color: #1f2937;
+    }
+
+    .btn {
+      background-color: #4f46e5;
+      color: white;
+      padding: 10px 18px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #3730a3;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .toolbar input, .toolbar select {
+      padding: 12px 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 15px;
+      width: 260px;
+      background-color: #ffffff;
+    }
+
+    .cont {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 25px;
+    }
+
+    .cont div {
+      background-color: white;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .cont div:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .cont img {
+      height: 180px;
+      width: 180px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .cont h3 {
+      font-size: 16px;
+      color: #111827;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .cont p {
+      font-size: 14px;
+      color: #4b5563;
+      margin: 5px 0;
+      text-align: center;
+    }
+
+    .cont button {
+      margin-top: 12px;
+      background-color: #10b981;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .cont button:hover {
+      background-color: #059669;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🛒 ShopNow</h1>
+    <a href="helper.html" class="btn">Go to Cart</a>
+  </header>
+
+  <div class="toolbar">
+    <input type="text" id="search" oninput="sch()" placeholder="Search product here..." />
+    <select id="sort" onchange="sorted()">
+      <option value="">Sort By</option>
+      <option value="asc">Price: Low to High</option>
+     
+      <option value="dsc">Price: High to Low</option>
+     
+    </select>
+  </div>
+
+  <div class="cont"></div>
+
+  <script>
+    let bag = [];
+    let cart = JSON.parse(localStorage.getItem("cartarr")) || [];
+
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((data) => {
+        bag = data;
+        displayCard(data);
+      })
+      .catch((err) => console.log(err.message));
+
+    function displayCard(arr) {
+      document.querySelector(".contpra").innerHTML = "";
+      arr.forEach((el) => {
+        const box = document.createElement("div");
+
+        const image = document.createElement("img");
+        image.setAttribute("src", el.image);
+
+        const title = document.createElement("h3");
+        title.innerText = Title: ${el.title};
+
+        const description = document.createElement("p");
+        description.innerText = Description: ${el.description};
+
+        const category = document.createElement("p");
+        category.innerText = Category: ${el.category};
+
+        const price = document.createElement("p");
+        price.innerText = Price: ₹${el.price};
+
+        const rating = document.createElement("p");
+        rating.innerText = Rating: ${el.rating.rate} ⭐;
+
+        const Add = document.createElement("button");
+        Add.innerText = "Add to Cart";
+        Add.addEventListener("click", function () {
+          cart.push(el);
+          localStorage.setItem("cartarr", JSON.stringify(cart));
+        });
+
+        box.append(image, title, description, category, price, rating, Add);
+        document.querySelector(".cont").append(box);
+      });
+    }
+
+    function sch() {
+      const q = document.querySelector("#search").value;
+      const filtered = bag.filter((el) =>
+        el.title.toLowerCase().includes(q.toLowerCase())
+      );
+      displayCard(filtered);
+    }
+
+    function sorted() {
+      const query = document.querySelector("#sort").value;
+      if (query == "asc") {
+        let sortedasc = bag.sort((a, b) => a.price - b.price);
+        displayCard(sortedasc);
+      } else {
+        let sorteddasc = bag.sort((b, a) => a.price - b.price);
+        displayCard(sorteddasc);
+      }
+    }
+  </script>
+</body>
+</html>
